@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0 (Python 3.9.4 on win32)" generated="20210404 19:51:16.915" rpa="false" schemaversion="2">
+<suite id="s1" name="LoginOrange" source="C:\Users\Positivo\Documents\Automation_Orange\1-features\LoginOrange.robot">
+<test id="s1-t1" name="Login com sucesso">
+<kw name="Abre Navegador" library="config" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210404 19:51:17.222" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20210404 19:51:17.222" endtime="20210404 19:51:21.865"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210404 19:51:21.866" endtime="20210404 19:51:22.014"/>
+</kw>
+<status status="PASS" starttime="20210404 19:51:17.221" endtime="20210404 19:51:22.015"/>
+</kw>
+<kw name="Eu como cliente digito o usuário &quot;Admin&quot; e a senha &quot;admin123&quot;" library="LoginOrangeSteps" sourcename="Eu como cliente digito o usuário &quot;${user}&quot; e a senha &quot;${password}&quot;">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TxtUsername}</arg>
+<arg>${user}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 19:51:22.020" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
+<status status="PASS" starttime="20210404 19:51:22.018" endtime="20210404 19:51:22.160"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210404 19:51:22.546" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210404 19:51:22.160" endtime="20210404 19:51:22.546"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${TxtPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210404 19:51:22.547" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" starttime="20210404 19:51:22.546" endtime="20210404 19:51:22.650"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210404 19:51:23.034" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210404 19:51:22.651" endtime="20210404 19:51:23.034"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${IdBtnLogin}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210404 19:51:23.035" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" starttime="20210404 19:51:23.034" endtime="20210404 19:51:26.273"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210404 19:51:26.651" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210404 19:51:26.273" endtime="20210404 19:51:26.652"/>
+</kw>
+<status status="PASS" starttime="20210404 19:51:22.017" endtime="20210404 19:51:26.652"/>
+</kw>
+<kw name="Então valido o login" library="LoginOrangeSteps">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${IdWelcome}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20210404 19:51:26.653" endtime="20210404 19:51:26.687"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210404 19:51:27.022" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210404 19:51:26.688" endtime="20210404 19:51:27.023"/>
+</kw>
+<status status="PASS" starttime="20210404 19:51:26.653" endtime="20210404 19:51:27.023"/>
+</kw>
+<kw name="Fecha Navegador" library="config" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210404 19:51:27.024" endtime="20210404 19:51:29.392"/>
+</kw>
+<status status="PASS" starttime="20210404 19:51:27.024" endtime="20210404 19:51:29.393"/>
+</kw>
+<status status="PASS" starttime="20210404 19:51:17.220" endtime="20210404 19:51:29.395"/>
+</test>
+<status status="PASS" starttime="20210404 19:51:16.917" endtime="20210404 19:51:29.401"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="LoginOrange">LoginOrange</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
